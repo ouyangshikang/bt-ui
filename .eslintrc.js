@@ -10,7 +10,7 @@ module.exports = {
 	rules: {
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-		'indent': ['error', 'tab'], // tab缩进
+		'indent': ['error', 4],
 		'linebreak-style': ['error', 'unix'],
 		'quotes': ['error', 'single'], // 字符串单引号
 		'semi': ['error', 'always'], // 必须分号结尾

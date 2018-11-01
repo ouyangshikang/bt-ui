@@ -1,0 +1,95 @@
+{
+	"开发指南": [
+	    {
+			"path": "/",
+			"redirect": "/introduce"
+		},
+		{
+			"path": "/introduce",
+			"name": "介绍"
+		},
+		{
+			"path": "/install",
+			"name": "安装"
+		},
+		{
+			"path": "/quickstart",
+			"name": "快速开始"
+		},
+		{
+			"path": "/changelog",
+			"name": "更新日志"
+		}
+	],
+	"组件": [
+		{
+			"path": "/",
+			"name": "基础组件",
+			"children": [
+				{
+					"path": "/button",
+					"name": "Button 按钮"
+				},
+				{
+					"path": "/tag",
+					"name": "Tag 标签"
+				}
+			]
+		},
+		{
+			"path": "/",
+			"name": "视图组件",
+			"children": [
+				{
+					"path": "/message",
+					"name": "Message 消息提示"
+				},
+				{
+					"path": "/notification",
+					"name": "Notification 通知"
+				}
+			]
+		},
+		{
+			"path": "/",
+			"name": "表单组件",
+			"children": [
+				{
+					"path": "/input",
+					"name": "Input 输入框"
+				},
+				{
+					"path": "/radio",
+					"name": "Radio 单选框"
+				},
+				{
+					"path": "/checkbox",
+					"name": "Checkbox 复选框"
+				},
+				{
+					"path": "/select",
+					"name": "Select 选择器"
+				}
+			]
+		},
+		{
+			"path": "/",
+			"name": "其他组件",
+			"children": [
+				{
+					"path": "/tooltip",
+					"name": "Tooltip 文字提示"
+				}
+			]
+		}
+	],
+	"业务组件": [
+		{
+			"path": "/",
+			"name": "bt业务组件",
+			"children": [
+
+			]
+		}
+	]
+}

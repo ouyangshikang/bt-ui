@@ -1,31 +1,47 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+	<bt-header></bt-header>
+	<div class="page-container">
+		<div class="page-body">
+			<bt-nav class="nav"></bt-nav>
+			<router-view class="main"/>
+		</div>
+	</div>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+<script>
+import btHeader from './components/bt-header';
+import btNav from './components/bt-nav';
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+export default {
+	components: {
+		btHeader,
+		btNav
+	}
+};
+</script>
+
+
+
+<style lang="scss">
+.page-container {
+	margin: 48px auto;
+	width: 90%;
+	min-height: 600px;
+    box-shadow: rgba(223, 225, 230, 0.5) 0px 4px 30px 0px;
+	.page-body {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		.nav {
+			width: 200px;
+		}
+		.main {
+			width: 1000px;
+			padding: 32px 48px 48px;
+		}
+	}
 }
 </style>

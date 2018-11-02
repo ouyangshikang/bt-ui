@@ -2,11 +2,11 @@
 	<button
 		class="bt-button"
 		@click="handleClick"
-		:disabled="buttonDisabled || loading"
+		:disabled="disabled"
 		:type="nativeType"
 		:class="[
 			type ? 'bt-button--' + type : '',
-			buttonSize ? 'bt-button--' + buttonSize : '',
+			size ? 'bt-button--size-' + size : '',
 			{
 				'is-disabled': disabled,
 				'is-plain': plain,

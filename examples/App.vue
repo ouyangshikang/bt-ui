@@ -1,9 +1,9 @@
 <template>
     <div id="app">
-        <bt-header></bt-header>
+        <btHeader></btHeader>
         <div class="page-container">
             <div class="page-body">
-                <bt-nav class="nav"></bt-nav>
+                <btNav class="nav"></btNav>
                 <router-view class="main"/>
             </div>
         </div>
@@ -26,8 +26,11 @@ export default {
 
 
 <style lang="scss">
+#app {
+    min-width: 1140px;
+}
 .page-container {
-    margin: 48px auto;
+    margin: 40px auto;
     width: 90%;
     min-height: 600px;
     box-shadow: rgba(223, 225, 230, 0.5) 0px 4px 30px 0px;
@@ -36,10 +39,11 @@ export default {
         display: flex;
         justify-content: space-between;
         .nav {
-            width: 200px;
+            min-width: 200px;
+            width: 18%
         }
         .main {
-            width: 1000px;
+            width: 82%;
             padding: 32px 48px 48px;
         }
     }

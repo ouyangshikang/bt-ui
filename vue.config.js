@@ -1,3 +1,38 @@
+
+const md = require('markdown-it')();
+const cheerio = require('cheerio');
+const MarkdownItContainer = require('markdown-it-container');
+function wrapCustomClass(render) {
+    return function(...args) {
+        return render(...args)
+            .replace('<code class="', '<code class="hljs ')
+            .replace('<code>', '<code class="hljs">');
+    };
+}
+function convertHtml(str) {
+    str = str.replace(/(&#x)(\w{4});/gi, function($0) {
+        return String.fromCharCode(parseInt(encodeURIComponent($0).replace(/(%26%23x)(\w{4})(%3B)/g, '$2'), 16));
+    });
+    return str;
+}
+
+const striptags = {
+    strip: function(str, tags) {
+        const $ = cheerio.load(str, { decodeEntities: false });
+        if (!tags || tags.length === 0) {
+            return str;
+        }
+        tags = !Array.isArray(tags) ? [tags] : tags;
+        let len = tags.length;
+
+        while (len--) {
+            $(tags[len]).remove();
+        }
+        return $.html();
+    }
+};
+
+
 module.exports = {
 // 修改 src 为 examples
     pages: {
@@ -24,15 +59,59 @@ module.exports = {
                 // 修改它的选项...
                 return options;
             });
-        config.module.rule('md')
-            .test(/\.md/)
+        config.module
+            .rule('md')
+            .test(/\.md$/)
             .use('vue-loader')
             .loader('vue-loader')
             .end()
             .use('vue-markdown-loader')
             .loader('vue-markdown-loader/lib/markdown-compiler')
             .options({
-                raw: true
+                raw: true,
+                preprocess: (MarkdownIt, source) => {
+                    MarkdownIt.renderer.rules.table_open = function() {
+                        return '<table class="table">';
+                    };
+                    MarkdownIt.renderer.rules.fence = wrapCustomClass(MarkdownIt.renderer.rules.fence);
+
+                    const code_inline = MarkdownIt.renderer.rules.code_inline;
+                    MarkdownIt.renderer.rules.code_inline = function(...args){
+                        args[0][args[1]].attrJoin('class', 'code_inline');
+                        return code_inline(...args);
+                    };
+                    return source;
+                },
+                use: [
+                    [MarkdownItContainer, 'demo', {
+                        // 用于校验包含demo的代码块
+                        // validate: params => {
+                        //     const res =  params.trim().match(/^demo\s+(.*)$/);
+                        //     console.log('res', res);
+                        //     return res;
+                        // },
+                        render: (tokens, idx) => {
+                            console.log('tokens', tokens);
+                            const m = tokens[idx].info.trim().match(/^demo\s+(.*)$/);
+                            if (tokens[idx].nesting === 1) {
+
+                                const description = (m && m.length > 1) ? m[1] : '';
+                                const content = tokens[idx + 1].content;
+
+                                // 编译成html
+                                const html = convertHtml(striptags.strip(content, 'script'));
+                                let descriptionHTML = description ? md.render(description) : '';
+
+                                return `<demo-block>
+                                            <div slot="source" class="source">${html}</div>
+                                            ${descriptionHTML}
+                                            <div slot="highlight" class="highlight">`;
+                            }
+
+                            return '</div></demo-block>\n';
+                        }
+                    }]
+                ]
             });
     }
 };

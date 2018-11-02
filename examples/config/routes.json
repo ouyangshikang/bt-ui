@@ -19,9 +19,13 @@
 		{
 			"path": "/changelog",
 			"name": "更新日志"
+		},
+		{
+			"path": "/todolist",
+			"name": "TodoList"
 		}
 	],
-	"组件": [
+	"基本组件": [
 		{
 			"path": "/",
 			"name": "基础组件",

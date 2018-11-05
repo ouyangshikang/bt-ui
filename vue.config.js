@@ -85,7 +85,6 @@ module.exports = {
                         //     return res;
                         // },
                         render: (tokens, idx) => {
-                            console.log('tokens', tokens);
                             const m = tokens[idx].info.trim().match(/^demo\s+(.*)$/);
                             if (tokens[idx].nesting === 1) {
 

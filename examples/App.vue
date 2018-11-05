@@ -28,23 +28,30 @@ export default {
 <style lang="scss">
 #app {
     min-width: 1140px;
+    height: 100vh;
+    overflow-y: hidden;
 }
 .page-container {
-    margin: 40px auto;
-    width: 90%;
+    margin: 20px auto;
+    width: 94%;
     min-height: 600px;
     box-shadow: rgba(223, 225, 230, 0.5) 0px 4px 30px 0px;
     .page-body {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        .nav, .main {
+            height: calc(100vh - 140px);
+            overflow-y: scroll;
+        }
         .nav {
-            min-width: 200px;
-            width: 18%
+            min-width: 240px;
+            width: 18%;
         }
         .main {
             width: 82%;
-            padding: 32px 48px 48px;
+            margin-top: 32px;
+            padding: 0 48px;
         }
     }
 }

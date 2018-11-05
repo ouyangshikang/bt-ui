@@ -31,10 +31,9 @@ export default {
 <style lang="scss">
 .demo-block{
     margin: 15px auto;
-    padding: 20px;
     border: 1px solid #ebebeb;
     border-radius: 3px;
-    transition: .2s;
+    transition: all linear .2s;
     .source {
         padding: 24px;
         div {
@@ -62,20 +61,35 @@ export default {
             margin: 10px;
             background-color: #fff;
         }
+        .highlight {
+            pre {
+                margin: 0;
+                code {
+                    display: block;
+                    background: #fafafa;
+                    padding: 18px 24px;
+                    overflow-x: auto;
+                }
+            }
+        }
     }
     &-control {
         border-top: 1px solid #eaeefb;
         height: 44px;
+        line-height: 44px;
         box-sizing: border-box;
         background-color: #fff;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
         text-align: center;
         margin-top: -1px;
-        color: #d3dce6;
+        color: #409eff;
         cursor: pointer;
         position: relative;
-        
+        &:hover {
+            color: #005cf9;
+            background-color: #f9fafc;
+        }
     }
 }
 </style>

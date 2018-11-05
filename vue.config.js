@@ -74,12 +74,6 @@ module.exports = {
                         return '<table class="table">';
                     };
                     MarkdownIt.renderer.rules.fence = wrapCustomClass(MarkdownIt.renderer.rules.fence);
-
-                    const code_inline = MarkdownIt.renderer.rules.code_inline;
-                    MarkdownIt.renderer.rules.code_inline = function(...args){
-                        args[0][args[1]].attrJoin('class', 'code_inline');
-                        return code_inline(...args);
-                    };
                     return source;
                 },
                 use: [

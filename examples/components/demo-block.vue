@@ -75,6 +75,7 @@ export default {
         color: #d3dce6;
         cursor: pointer;
         position: relative;
+        
     }
 }
 </style>

@@ -14,7 +14,7 @@
 </p>
 
 # bt-ui
-> vue components build with vue
+vue components build with vue
 ## api
 [演示文档](http://frontman.cn/bt-ui)
 

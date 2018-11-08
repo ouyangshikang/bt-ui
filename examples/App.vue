@@ -35,7 +35,8 @@ export default {
     margin: 20px auto;
     width: 94%;
     min-height: 600px;
-    box-shadow: rgba(223, 225, 230, 0.5) 0px 4px 30px 0px;
+    box-shadow: rgb(223, 225, 230) 0px 4px 30px 0px;
+    border-radius: 5px;
     .page-body {
         width: 100%;
         display: flex;
@@ -45,11 +46,11 @@ export default {
             overflow-y: scroll;
         }
         .nav {
-            min-width: 240px;
-            width: 18%;
+            min-width: 250px;
+            width: 20%;
         }
         .main {
-            width: 82%;
+            width: 80%;
             margin-top: 32px;
             padding: 0 48px;
         }

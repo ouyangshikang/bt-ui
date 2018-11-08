@@ -47,10 +47,10 @@ export default {
         }
         .nav {
             min-width: 250px;
-            width: 20%;
+            width: 18%;
         }
         .main {
-            width: 80%;
+            width: 82%;
             margin-top: 32px;
             padding: 0 48px;
         }

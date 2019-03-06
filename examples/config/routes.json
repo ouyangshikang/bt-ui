@@ -92,7 +92,10 @@
 			"path": "/",
 			"name": "bt业务组件",
 			"children": [
-
+				{
+					"path": "/scrollbar",
+					"name": "Scrollbar 滚动条"
+				}
 			]
 		}
 	]

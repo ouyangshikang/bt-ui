@@ -6,9 +6,11 @@ import demoBlock from './components/demo-block.vue';
 
 
 import btui from '../packages/index';
-import '../packages/theme-default/index.scss';
-
 Vue.use(btui);
+
+// import { btButton } from '../packages/index';
+// Vue.component('bt-button', btButton);
+
 Vue.component('demo-block', demoBlock);
 
 Vue.config.productionTip = false;

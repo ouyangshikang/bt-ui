@@ -1,0 +1,87 @@
+.bt-scrollbar {
+    overflow: hidden;
+    position: relative;
+    &:hover,
+    &:active,
+    &:focus {
+        .bt-scrollbar__thumb {
+            opacity: 0.6;
+            transition: opacity .2s linear, width .2s ease-in-out, height .2s ease-in-out;
+        }
+    }
+    &__bar {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        z-index: 1;
+        transition: background-color .2s linear;
+        background: transparent;
+        &.is-vertical {
+            width: 15px;
+            top: 0px;
+            &.draging {
+                background-color: rgba(217, 223, 232, 1);
+            }
+            & > div {
+                top: 0;
+                right: 2px;
+                width: 6px;
+            }
+            &:hover {
+                background-color: rgba(217, 223, 232, 1);
+                > div {
+                    opacity: 1;
+                    width: 11px;
+                }
+            }
+        }
+        &.is-horizontal {
+            height: 15px;
+            left: 0px;
+            &.draging {
+                background-color: rgba(217, 223, 232, 1);
+            }
+            & > div {
+                left: 0;
+                bottom: 2px;
+                height: 6px;
+            }
+            &:hover {
+                background-color: rgba(217, 223, 232, 1);
+                > div {
+                    opacity: 1;
+                    height: 11px;
+                }
+            }
+        }
+    }
+    &__thumb {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        cursor: pointer;
+        border-radius: 4px;
+        background-color: #d3e5ff;
+        border: 1px solid #9cc5ff;
+        opacity: 0;
+        box-sizing: border-box;
+        &.draging {
+            opacity: 1 !important;
+            height: 11px !important;
+        }
+    }
+    &__wrap {
+        overflow: scroll;
+        height: 100%;
+        &.nativeScroll-hide {
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+        .resize {
+            display: inline-block;
+        }
+    }
+}

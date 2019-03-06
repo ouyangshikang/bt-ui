@@ -1,14 +1,14 @@
 {
   "name": "bt-ui",
   "description": "An vue components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "private": false,
   "author": {
     "name": "baituo",
     "email": "ouyangshikang@gmail.com"
   },
-  "main": "lib/bt-ui.umd.min.js",
+  "main": "lib/bt-ui.umd.js",
   "keywords": [
     "vue",
     "bt-ui",
@@ -39,6 +39,7 @@
     "markdown-it": "^8.4.2",
     "markdown-it-container": "^2.0.0",
     "node-sass": "^4.9.4",
+    "resize-observer-polyfill": "^1.5.0",
     "sass-loader": "^7.1.0",
     "vue-loader": "^15.4.2",
     "vue-markdown-loader": "^2.4.1",

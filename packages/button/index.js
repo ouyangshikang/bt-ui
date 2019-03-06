@@ -1,7 +1,7 @@
-import button from './button';
+import BtButton from './button';
 
-button.install = function(Vue) {
-    Vue.component(button.name, button);
+BtButton.install = function(Vue) {
+    Vue.component(BtButton.name, BtButton);
 };
 
-export default button;
+export default BtButton;

@@ -3,9 +3,8 @@
 ### 基础用法
 基础的按钮用法
 
-<!-- <div class="demo-box"> -->
-
 <script>console.log(111)</script>
+
 ::: demo 使用```type```, ```plain```和```round``` 属性来定义Button 的样式
 ```html
   <div>

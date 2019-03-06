@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-    name: 'btButton',
+    name: 'BtButton',
     props: {
         type: {
             type: String,

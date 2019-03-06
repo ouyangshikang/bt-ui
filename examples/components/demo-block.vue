@@ -36,7 +36,7 @@ export default {
     transition: all linear .2s;
     .source {
         padding: 24px;
-        div {
+        > div {
             margin-bottom: 20px;
             &:last-child {
                 margin-bottom: 0px;

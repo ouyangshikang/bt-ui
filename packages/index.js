@@ -1,7 +1,13 @@
-import btButton from './button/index';
+// styles
+import './theme-default/index.scss';
+import Button from './button/index';
+import Scrollbar from './scrollbar/index';
+import ContextMenu from './content-menu/index';
 
 const components = [
-    btButton
+    Button,
+    Scrollbar,
+    ContextMenu
 ];
 
 // 定义install方法,接受Vue作为参数,use注册组件时所有组件都将被注册
@@ -18,7 +24,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-    version: '0.0.1',
     install,
-    btButton
+    Button,
+    Scrollbar,
+    ContextMenu
 };

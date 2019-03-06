@@ -8,11 +8,20 @@
     "name": "baituo",
     "email": "ouyangshikang@gmail.com"
   },
+  "repository": "https://github.com/ouyangshikang/bt-ui",
+  "bugs": {
+    "url": "https://github.com/ouyangshikang/bt-ui/issues"
+  },
   "main": "./lib/bt-ui.umd.js",
   "keywords": [
     "vue",
     "bt-ui",
     "vue components"
+  ],
+  "files": [
+    "README.md",
+    "dist",
+    "lib"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -8,7 +8,7 @@
     "name": "baituo",
     "email": "ouyangshikang@gmail.com"
   },
-  "main": "lib/bt-ui.umd.js",
+  "main": "./lib/bt-ui.umd.js",
   "keywords": [
     "vue",
     "bt-ui",

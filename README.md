@@ -14,7 +14,7 @@
 </p>
 
 # bt-ui
-vue components build with vue
+A ui component library built with vue-cli@3
 ## api
 [演示文档](http://frontman.cn/bt-ui)
 
@@ -23,23 +23,30 @@ vue components build with vue
 npm install bt-ui -S
 ```
 ## quickstart
-``` javascript
+在main.js中完整引入
+``` js
 
-import Vue from 'vue'
-import btui from 'bt-ui'
+import Vue from 'vue';
+import btui from 'bt-ui';
 
-Vue.use(btui)
+Vue.use(btui);
 
-// or
+new Vue({
+    router,
+    render: h => h(App)
+}).$mount('#app');
+```
+在.vue文件中按需引入
+``` js
 import {
   Select,
   Button
   // ...
 } from 'bt-ui'
 
-Vue.component(Select.name, Select)
-Vue.component(Button.name, Button)
-
+export default {
+    components: { Select, Button},
+};
 ```
 ## Browser Support
 chrome、firefox、暂不支持IE。

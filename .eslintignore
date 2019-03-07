@@ -1,1 +1,4 @@
 examples/docs/*
+lib
+node_modules
+dist

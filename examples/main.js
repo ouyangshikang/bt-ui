@@ -5,11 +5,11 @@ import './assets/md.scss';
 import demoBlock from './components/demo-block.vue';
 
 
-import btui from '../packages/index';
-Vue.use(btui);
+// import btui from '../packages/index';
+// Vue.use(btui);
 
-// import { btButton } from '../packages/index';
-// Vue.component('bt-button', btButton);
+import { Button } from '../lib/bt-ui.umd';
+Vue.component('bt-button', Button);
 
 Vue.component('demo-block', demoBlock);
 

@@ -4,6 +4,8 @@ import Button from './button/index';
 import Scrollbar from './scrollbar/index';
 import ContextMenu from './content-menu/index';
 
+const version = '0.0.5';
+
 const components = [
     Button,
     Scrollbar,
@@ -25,6 +27,11 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
     install,
+    version
+};
+
+// 输出各个组件，用于按需引入
+export {
     Button,
     Scrollbar,
     ContextMenu

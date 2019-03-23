@@ -28,7 +28,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "lib": "vue-cli-service build --target lib --name bt-ui --dest lib packages/index.js"
+    "lib": "vue-cli-service build --target lib --name bt-ui --dest lib packages/index.js",
+    "build:docs": "vue-cli-service build && node scripts/build-docs.js"
   },
   "dependencies": {
     "vue": "^2.5.17",
@@ -45,6 +46,7 @@
     "chai": "^4.1.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "gh-pages": "^2.0.1",
     "markdown-it": "^8.4.2",
     "markdown-it-container": "^2.0.0",
     "node-sass": "^4.9.4",

@@ -1,7 +1,7 @@
 {
   "name": "bt-ui",
   "description": "An vue components",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "private": false,
   "author": {
@@ -29,7 +29,8 @@
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "lib": "vue-cli-service build --target lib --name bt-ui --dest lib packages/index.js",
-    "build:docs": "vue-cli-service build && node scripts/build-docs.js"
+    "build:docs": "vue-cli-service build && node scripts/build-docs.js",
+    "release": "sh scripts/release.sh"
   },
   "dependencies": {
     "vue": "^2.5.17",

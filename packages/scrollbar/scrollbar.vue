@@ -68,7 +68,7 @@ export default {
         },
         addResizeListener(element) {
             const resizeObserver = new ResizeObserver(entries => {
-                entries.forEach(entry => {
+                entries.forEach(() => {
                     // console.log(entry);
                     this.scrollUpdate();
                 });
@@ -77,7 +77,7 @@ export default {
         },
         removeResizeListener(element) {
             const resizeObserver = new ResizeObserver(entries => {
-                entries.forEach(entry => {
+                entries.forEach(() => {
                     this.scrollUpdate();
                 });
             });

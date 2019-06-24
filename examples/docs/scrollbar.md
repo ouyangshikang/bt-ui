@@ -7,7 +7,7 @@
         <ul class="pages-list">
             <li v-for="(layout, index) in layouts" :key="index" class="pages-layout"></li>
         </ul>
-        <div class="pages-layout" @click="Addlayouts">+</div>
+        <div class="pages-layout add" @click="Addlayouts">+</div>
     </div>
 </bt-scrollbar>
 
@@ -26,7 +26,7 @@
     }
 </script>
 
-<style>
+<style lang="scss">
     .bt-scrollbar {
         border: 1px solid #80a0fb;
     }
@@ -45,6 +45,12 @@
         width: 80px;
         margin-left: 8px;
         border: 1px solid #412345;
+        &.add {
+            margin-top: 16px;
+            text-align: center;
+            font-size: 42px;
+            cursor: pointer;
+        }
     }
 </style>
 ```

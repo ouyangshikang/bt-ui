@@ -10,12 +10,6 @@
         >
             <div class="resize" ref="resize">
                 <slot></slot>
-                <div class="multiple-page">
-                    <ul class="pages-list">
-                        <li v-for="(layout, index) in layouts" :key="index" class="pages-layout"></li>
-                    </ul>
-                    <div class="pages-layout" @click="Addlayouts">+</div>
-                </div>
             </div>
         </div>
     </div>
@@ -44,8 +38,7 @@ export default {
             moveX: 0,
             moveY: 0,
             sizeWidth: '0',
-            sizeHeight: '0',
-            layouts: [0, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
+            sizeHeight: '0'
         };
     },
     computed: {
@@ -54,9 +47,6 @@ export default {
         }
     },
     methods: {
-        Addlayouts() {
-            this.layouts.push(1);
-        },
         handleScroll() {
             const wrap = this.wrap;
             this.moveY = ((wrap.scrollTop * 100) / wrap.clientHeight);
@@ -74,12 +64,12 @@ export default {
 
             this.sizeHeight = heightRatio < 100 ? (heightRatio + '%') : '';
             this.sizeWidth = widthRatio < 100 ? (widthRatio + '%') : '';
-            console.log(this.sizeHeight, this.sizeWidth);
+            // console.log(this.sizeHeight, this.sizeWidth);
         },
         addResizeListener(element) {
             const resizeObserver = new ResizeObserver(entries => {
                 entries.forEach(entry => {
-                    console.log(entry);
+                    // console.log(entry);
                     this.scrollUpdate();
                 });
             });
@@ -88,7 +78,6 @@ export default {
         removeResizeListener(element) {
             const resizeObserver = new ResizeObserver(entries => {
                 entries.forEach(entry => {
-                    console.log(entry);
                     this.scrollUpdate();
                 });
             });
@@ -107,22 +96,3 @@ export default {
     }
 };
 </script>
-
-<style lang="scss">
-.multiple-page {
-    display: inline-flex;
-    margin: auto;
-    .pages-list {
-        display: inline-flex;
-        align-items: center;
-        padding: 0;
-        .pages-layout {
-            display: inline-block;
-            height: 54px;
-            width: 80px;
-            margin-left: 8px;
-            border: 1px solid #412345;
-        }
-    }
-}
-</style>

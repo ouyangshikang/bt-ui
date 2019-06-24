@@ -46,7 +46,7 @@ module.exports = {
     css: {
         extract: false
     },
-    baseUrl: process.env.NODE_ENV === 'production' ? '/bt-ui' : '/',
+    publicPath: process.env.NODE_ENV === 'production' ? '/bt-ui' : '/',
     // 扩展 webpack 配置，使 packages 加入编译
     chainWebpack: config => {
         config.module

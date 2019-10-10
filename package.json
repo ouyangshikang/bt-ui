@@ -1,6 +1,6 @@
 {
   "name": "bt-ui",
-  "description": "An vue components",
+  "description": "An vue components lib",
   "version": "0.0.6",
   "license": "MIT",
   "private": false,
@@ -27,26 +27,27 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit --watch",
     "lib": "vue-cli-service build --target lib --name bt-ui --dest lib packages/index.js",
     "build:docs": "vue-cli-service build && node scripts/build-docs.js",
     "release": "sh scripts/release.sh"
   },
   "dependencies": {
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1"
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.5",
-    "@vue/cli-plugin-eslint": "^3.0.5",
-    "@vue/cli-plugin-unit-mocha": "^3.0.5",
-    "@vue/cli-service": "^3.0.5",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-plugin-unit-jest": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
     "@vue/eslint-config-standard": "^4.0.0",
-    "@vue/test-utils": "^1.0.0-beta.20",
+    "@vue/test-utils": "1.0.0-beta.29",
     "babel-eslint": "^10.0.1",
-    "chai": "^4.1.2",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0-0",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
     "gh-pages": "^2.0.1",
     "markdown-it": "^8.4.2",
     "markdown-it-container": "^2.0.0",
@@ -55,7 +56,7 @@
     "sass-loader": "^7.1.0",
     "vue-loader": "^15.4.2",
     "vue-markdown-loader": "^2.4.1",
-    "vue-template-compiler": "^2.5.17",
+    "vue-template-compiler": "^2.6.10",
     "highlight.js": "9.15.6"
   }
 }

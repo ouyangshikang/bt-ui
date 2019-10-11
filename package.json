@@ -1,62 +1,69 @@
 {
-  "name": "bt-ui",
-  "description": "An vue components lib",
-  "version": "0.0.6",
-  "license": "MIT",
-  "private": false,
-  "author": {
-    "name": "baituo",
-    "email": "ouyangshikang@gmail.com"
-  },
-  "repository": "https://github.com/ouyangshikang/bt-ui",
-  "bugs": {
-    "url": "https://github.com/ouyangshikang/bt-ui/issues"
-  },
-  "main": "./lib/bt-ui.umd.js",
-  "keywords": [
-    "vue",
-    "bt-ui",
-    "vue components"
-  ],
-  "files": [
-    "README.md",
-    "dist",
-    "lib"
-  ],
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit --watch",
-    "lib": "vue-cli-service build --target lib --name bt-ui --dest lib packages/index.js",
-    "build:docs": "vue-cli-service build && node scripts/build-docs.js",
-    "release": "sh scripts/release.sh"
-  },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.8.0",
-    "@vue/cli-plugin-eslint": "^3.8.0",
-    "@vue/cli-plugin-unit-jest": "^3.8.0",
-    "@vue/cli-service": "^3.8.0",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "@vue/test-utils": "1.0.0-beta.29",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "gh-pages": "^2.0.1",
-    "markdown-it": "^8.4.2",
-    "markdown-it-container": "^2.0.0",
-    "node-sass": "^4.9.4",
-    "resize-observer-polyfill": "^1.5.0",
-    "sass-loader": "^7.1.0",
-    "vue-loader": "^15.4.2",
-    "vue-markdown-loader": "^2.4.1",
-    "vue-template-compiler": "^2.6.10",
-    "highlight.js": "9.15.6"
-  }
+    "name": "bt-ui",
+    "description": "An vue components lib",
+    "version": "0.0.6",
+    "license": "MIT",
+    "private": false,
+    "author": {
+        "name": "baituo",
+        "email": "ouyangshikang@gmail.com"
+    },
+    "repository": "https://github.com/ouyangshikang/bt-ui",
+    "bugs": {
+        "url": "https://github.com/ouyangshikang/bt-ui/issues"
+    },
+    "main": "./lib/bt-ui.umd.js",
+    "keywords": [
+        "vue",
+        "bt-ui",
+        "vue components"
+    ],
+    "files": [
+        "README.md",
+        "dist",
+        "lib"
+    ],
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "test:unit": "vue-cli-service test:unit --watch",
+        "lib": "vue-cli-service build --target lib --name bt-ui --dest lib packages/index.js",
+        "build:docs": "vue-cli-service build && node scripts/build-docs.js",
+        "release": "sh scripts/release.sh"
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    },
+    "dependencies": {
+        "core-js": "^2.6.5",
+        "vue": "^2.6.10",
+        "vue-router": "^3.0.3",
+        "commitizen": "^3.1.1",
+            "cz-conventional-changelog": "^2.1.0"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.8.0",
+        "@vue/cli-plugin-eslint": "^3.8.0",
+        "@vue/cli-plugin-unit-jest": "^3.8.0",
+        "@vue/cli-service": "^3.8.0",
+        "@vue/eslint-config-standard": "^4.0.0",
+        "@vue/test-utils": "1.0.0-beta.29",
+        "babel-eslint": "^10.0.1",
+        "babel-jest": "^23.6.0",
+        "eslint": "^5.16.0",
+        "eslint-plugin-vue": "^5.0.0",
+        "gh-pages": "^2.0.1",
+        "markdown-it": "^8.4.2",
+        "markdown-it-container": "^2.0.0",
+        "node-sass": "^4.9.4",
+        "resize-observer-polyfill": "^1.5.0",
+        "sass-loader": "^7.1.0",
+        "vue-loader": "^15.4.2",
+        "vue-markdown-loader": "^2.4.1",
+        "vue-template-compiler": "^2.6.10",
+        "highlight.js": "9.15.6"
+    }
 }

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hello.vue 测试组件渲染是否正常 1`] = `
+<div class="hello">
+  <h1>你好</h1> <span class="handsome">你真帅2</span>
+</div>
+`;

@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import bemMixin from '../../mixins/bem';
+import bemMixin from '../mixins/bem';
 
 export default {
     name: 'video-dialog',

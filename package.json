@@ -59,7 +59,7 @@
         "gh-pages": "^2.0.1",
         "markdown-it": "^8.4.2",
         "markdown-it-container": "^2.0.0",
-        "node-sass": "^4.9.4",
+        "node-sass": "^4.13.1",
         "resize-observer-polyfill": "^1.5.0",
         "sass-loader": "^7.1.0",
         "vue-loader": "^15.4.2",
